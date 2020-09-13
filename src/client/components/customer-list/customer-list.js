@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './customer-list.scss';
 import ListItem from './list-item';
 
-function CustomerList() {
+function CustomerList(props) {
+  const {customers, handleSelection} = props;
+  let [selected, setSelected] = useState('');
+
+  let handleClick = (_id) => {
+    setSelected(_id);
+    handleSelection(_id);
+  };
+
   return (
-    <div className="customer-list">
-      <div className="search-section">
-        <div className="search-box">
-          <i className="material-icons md-18">search</i>
-          <input type="text" className="search-field" placeholder="Search Customers"/>
-        </div>
-      </div>
-      <div className="list">
-        <ListItem customer={
-          {
-            id: 1,
-            name: 'Harry Potter',
-            age: 31,
-            gender: 'Male'
-          }
-        }/>
-      </div>
-    </div>
+    <ul className="customer-list">
+      {
+        customers.map(customer => (
+          <ListItem 
+            customer={customer} key={customer._id}
+            onClick={handleClick} isSelected={customer._id === selected}
+          />
+        ))
+      }
+    </ul>
   )
 }
 

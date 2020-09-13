@@ -1,29 +1,3 @@
 .customer-list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-  .search-section {
-    background-color: #eee;
-    width: 100%;
-    padding: 8px 12px;
-    box-sizing: border-box;
-  }
-  .search-box {
-    display: flex;
-    padding: 4px;
-    background-color: #fff;
-    border-radius: 20px;
-    align-items: center;
-    i {
-      margin: 0 8px;
-    }
-    input {
-      outline: none;
-      border: none;
-    }
-  }
-  .list {
-    overflow: scroll;
-  }
+  overflow: scroll;
 }

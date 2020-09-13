@@ -23,6 +23,7 @@
     }
   }
   .copy {
+    position: relative;
     margin: 16px;
     cursor: pointer;
     padding: 12px;
@@ -37,5 +38,19 @@
       outline: none;
       transform: scale(1.2);
     }
+  }
+
+  .copy:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    display: block;
+    top: 110%;
+    right: -25%;
+    width: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    text-align: center;
   }
 }

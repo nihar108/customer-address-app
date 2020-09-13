@@ -14,7 +14,6 @@ function AddressItem(props) {
 
   function handleCopy() {
     const copiedAddress = `${address}\n${city}\n${state}\nPincode: ${pin}\n${country}`;
-    console.log(copiedAddress);
     copyToClipboard(copiedAddress);
   }
 
@@ -34,7 +33,7 @@ function AddressItem(props) {
         <p className="pin">Pincode: {pin}</p>
         <p className="country">{country}</p>
       </div>
-      <div className="copy" onClick={handleCopy}>
+      <div className="copy" onClick={handleCopy} data-text="Copy">
         <i className="material-icons md-18">content_copy</i>
       </div>
     </li>

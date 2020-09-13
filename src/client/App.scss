@@ -25,17 +25,17 @@ body {
   z-index: 1;
   transition: all 0.1s ease-in-out;
   max-height: 100vh;
-  @media screen and (min-width: 1366px) {
-    width: 1366px;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
     height: 90vh;
   }
   .left-section {
-    flex: 0.3;
+    flex: 0.35;
     max-height: 100%;
     border-right: 1px solid #ccc;
   }
   .right-section {
-    flex: 0.7;
+    flex: 0.65;
     max-height: 100%;
     background-color: #d1f3d1;
   }
