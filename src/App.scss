@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(160deg, #f3d9d1, #f3d1e2)
+}
+
+.app-body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
+  z-index: 1;
+  transition: all 0.1s ease-in-out;
+  max-height: 100vh;
+  @media screen and (min-width: 1366px) {
+    width: 1366px;
+    height: 90vh;
+  }
+  .left-section {
+    flex: 0.3;
+    max-height: 100%;
+    border-right: 1px solid #ccc;
+  }
+  .right-section {
+    flex: 0.7;
+    max-height: 100%;
+    background-color: #d1f3d1;
+  }
+}
